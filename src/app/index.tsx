@@ -18,6 +18,7 @@ const Index = () => {
       <ViewComponent />
       <ButtonComponent />
       <ImageComponent />
+      
     </View>
   );
 };
