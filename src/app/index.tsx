@@ -7,6 +7,7 @@ import AgeComponent from "../components/introductionComponents/AgeComponent";
 import TextComponent from "../components/countCompoennt/TextComponent";
 import ViewComponent from "../components/countCompoennt/ViewComponent";
 import ButtonComponent from "../components/countCompoennt/ButtonComponent";
+import ImageComponent from "../components/countCompoennt/ImageComponent";
 
 
 
@@ -16,6 +17,7 @@ const Index = () => {
       <TextComponent />
       <ViewComponent />
       <ButtonComponent />
+      <ImageComponent />
     </View>
   );
 };
