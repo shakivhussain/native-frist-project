@@ -12,3 +12,5 @@ export default Greet;
 // const  Greet= () => { 
 //     return <Text>Good Day Mr Shakiv HuXn</Text>
 // }
+
+
