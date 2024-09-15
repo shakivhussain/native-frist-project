@@ -8,17 +8,25 @@ import TextComponent from "../components/countCompoennt/TextComponent";
 import ViewComponent from "../components/countCompoennt/ViewComponent";
 import ButtonComponent from "../components/countCompoennt/ButtonComponent";
 import ImageComponent from "../components/countCompoennt/ImageComponent";
+import CardComponent from "../components/cardComponent/CardComponent";
+import DynamicContent from "../components/dynamicContantent/DynamicContent";
+import CarComponent from "../components/carComponent/CarComponent";
 
 
 
 const Index = () => {
   return (
     <View>
-      <TextComponent />
+      {/* <TextComponent />
       <ViewComponent />
       <ButtonComponent />
-      <ImageComponent />
-      
+      <ImageComponent /> */}
+
+      {/* <CardComponent /> */}
+
+      {/* <DynamicContent /> */}
+
+      <CarComponent />
     </View>
   );
 };
