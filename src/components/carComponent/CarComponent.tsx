@@ -17,6 +17,7 @@ const CarComponent = () => {
 
     return (
         <View>
+            
 
             <Button title="This is price "></Button>
             <Image
