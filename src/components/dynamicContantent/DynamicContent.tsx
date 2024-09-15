@@ -10,7 +10,8 @@ const DynamicContent = () => {
         <View>
             <Text>My Name is {username}</Text>
             <Text>Do Multiply  2 + 2 = {multiply(2, 2)}</Text>
-            <Text>Me : {me.name}</Text> // You cant render object directly!
+            {/* // You cant render object directly! */}
+            <Text>Me : {me.name}</Text> 
         </View>
     )
 }

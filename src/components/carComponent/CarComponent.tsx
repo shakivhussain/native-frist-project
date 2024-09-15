@@ -1,44 +1,109 @@
-import { View, Text, Image, Button } from 'react-native'
+import { View, Text, Image, Button, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
 
-const CarComponent = () => {
+// Define the Product interface
+export interface Product {
+    id: number;
+    productName: string;
+    price: string;
+    rating: string;
+    imageUrl: string;
+    desc: string;
+  }
 
-    const price = 2000000;
+const CarComponent : React.FC<{product:Product}> = ({product}) => {
+
+
+
+    const price = product.price;
 
     const imageWidth = 300;
 
     const imageHeight = 300;
 
-    const carName = "Lambo"
+    const carName = product.productName
 
-    const carRating = "4.9"
+    const carRating = product.rating
 
-    const carDescription = "Hey This is nice car, you can buy now !"
+    const carDescription = product.desc
 
     return (
-        <View>
-            
+        <View style={carStyle.container}>
 
-            <Button title="This is price "></Button>
+
+            <Text style={carStyle.pill}>{price}</Text>
             <Image
                 source={
-                    require("../../assets/lambo.png")}
+                    {uri:product.imageUrl}
+                }
                 style={
                     {
-                        width: imageWidth,
+                        width: "100%",
                         height: imageHeight
                     }
                 } />
 
-            <Text >"{carName}"</Text>
+            <Text style={carStyle.heading}>{carName}</Text>
+
             <Text>{carRating}</Text>
+
             <Text>{carDescription}</Text>
+
             <Text>{price}</Text>
-            <Button title="Add To Cart"></Button>
+
+            <Pressable style={carStyle.button}>
+
+                <Text style={carStyle.buttonText}>Add To Cart</Text>
+            </Pressable>
+
 
 
         </View>
     )
 }
+
+const carStyle = StyleSheet.create({
+
+    container: {
+        padding: 20,
+    },
+
+    pill: {
+        backgroundColor: "black",
+        color: "white",
+        paddingHorizontal: 5,
+        paddingVertical: 2,
+        borderRadius: 5,
+        padding: 20,
+        marginBottom: 10,
+        width: 80,
+        marginTop: 20,
+        textAlign: "center"
+    },
+    heading: {
+        fontSize: 24,
+        fontWeight: "bold",
+        marginTop:20
+    },
+
+    button: {
+        backgroundColor: "black",
+        paddingHorizontal: 5,
+        paddingVertical: 2,
+        borderRadius: 5,
+        marginBottom: 10,
+        textAlign: "center",
+        width: "80%",
+
+
+        
+    },
+
+    buttonText:{
+        color:"white",
+        fontWeight:"bold",
+        padding:10,
+    }
+})
 
 export default CarComponent

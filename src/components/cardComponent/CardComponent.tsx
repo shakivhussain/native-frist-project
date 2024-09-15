@@ -1,51 +1,56 @@
-import { View, Text, Image, Button } from 'react-native'
+import { View, Text, Image, Button, StyleSheet } from 'react-native'
 import React from 'react'
 
 const CardComponent = () => {
     return (
-        <View>
+        <View style={styles.container}>
 
-            <Image
-                source={require("../../assets/image.png")}
-                style={
-                    {
-                        width: 120,
-                        height: 120,
-                    }
+            <Image source={require("../../assets/image.png")} style={styles.imageStyle} />
 
-                } />
+            <Text style={styles.heading}> Shakiv Husain </Text>
 
-            <Text
-                style={
-                    {
-                        textAlign: 'center',
-                        color: "black",
-                        fontWeight: "bold",
-                        fontSize: 18
-                    }
-                }> Shakiv Husain </Text>
+            <Text style={styles.textNormal}>My Name is Shakiv Husain I love React Native.</Text>
 
-            <Text
-                style={
-                    {
-                        textAlign: "center",
-                        fontSize: 18,
-
-
-                    }
-                }>My Name is Shakiv Husain I love React Native.</Text>
-
-
-            <Button
-                title='Press Me'
-
-                onPress={() => {
-                }
-
-                }></Button>
+            <Button title='Press Me'onPress={() => { }} ></Button>
 
         </View>
     )
 }
+
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 20,
+        paddingTop: 50,
+        paddingBottom: 40,
+        margin: 20,
+        alignItems: "center",
+        shadowColor: "black",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
+    },
+
+    imageStyle: {
+        width: 90,
+        height: 90,
+        borderRadius: 100,
+        marginBottom: 20
+    },
+
+    heading: {
+
+        color: "black",
+        fontWeight: "bold",
+        fontSize: 28
+    },
+
+    textNormal: {
+        color: "black",
+
+        fontSize: 18
+    }
+})
 
 export default CardComponent

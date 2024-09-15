@@ -1,8 +1,12 @@
-import { Text } from "react-native"
+import style from "@/src/utils/styles";
+import { Text, View } from "react-native"
 
 
-function Greet(){
-    return <Text>Good Day Mr Shakiv HuXn Mansoori</Text>
+function Greet() {
+    return <View style={style.shadowStyle}>
+
+        <Text>Good Day Mr Shakiv HuXn Mansoori</Text>
+    </View>
 }
 
 
