@@ -4,16 +4,18 @@ import MyName from "../components/introductionComponents/MyName";
 import XHandleComponent from "../components/introductionComponents/XHandleComponent";
 import SubjectComponent from "../components/introductionComponents/SubjectComponent";
 import AgeComponent from "../components/introductionComponents/AgeComponent";
+import TextComponent from "../components/countCompoennt/TextComponent";
+import ViewComponent from "../components/countCompoennt/ViewComponent";
+import ButtonComponent from "../components/countCompoennt/ButtonComponent";
+
+
 
 const Index = () => {
   return (
     <View>
-      <MyName />
-      <Greet />
-      <XHandleComponent />
-      <SubjectComponent />
-      <AgeComponent/>
-      
+      <TextComponent />
+      <ViewComponent />
+      <ButtonComponent />
     </View>
   );
 };
