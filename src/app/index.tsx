@@ -17,6 +17,7 @@ import ExternalStyle from "../components/5_inlineComponent/ExternalStyle";
 import IntroductionScreen from "./introScreen/IntroductionScreen";
 import ListData from "../components/6_listData/ListData";
 import ArrayOfObjects from "../components/7_arrayOfObject/ArrayOfObjects";
+import ParentComponent from "../components/_8_props/ParentComponent";
 
 
 
@@ -49,7 +50,10 @@ const Index = () => {
 
       {/* <ListData /> */}
 
-      <ArrayOfObjects />
+      {/* <ArrayOfObjects /> */}
+
+      <ParentComponent />
+
     </View>
   );
 };

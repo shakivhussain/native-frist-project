@@ -9,11 +9,9 @@ export interface Product {
     rating: string;
     imageUrl: string;
     desc: string;
-  }
+}
 
-const CarComponent : React.FC<{product:Product}> = ({product}) => {
-
-
+const CarComponent: React.FC<{ product: Product }> = ({ product } ) => {
 
     const price = product.price;
 
@@ -27,14 +25,19 @@ const CarComponent : React.FC<{product:Product}> = ({product}) => {
 
     const carDescription = product.desc
 
+
+    // const renderItem = ({ item }: { item: Product }) => {
+
+    // }
+
     return (
         <View style={carStyle.container}>
 
-
             <Text style={carStyle.pill}>{price}</Text>
+
             <Image
                 source={
-                    {uri:product.imageUrl}
+                    { uri: product.imageUrl }
                 }
                 style={
                     {
@@ -53,7 +56,7 @@ const CarComponent : React.FC<{product:Product}> = ({product}) => {
 
             <Pressable style={carStyle.button}>
 
-                <Text style={carStyle.buttonText}>Add To Cart</Text>
+                <Text style={carStyle.buttonText} >Add To Cart</Text>
             </Pressable>
 
 
@@ -66,6 +69,12 @@ const carStyle = StyleSheet.create({
 
     container: {
         padding: 20,
+        backgroundColor: "white",
+
+        marginHorizontal: 20,
+        marginVertical: 20,
+        elevation: 5
+
     },
 
     pill: {
@@ -78,12 +87,13 @@ const carStyle = StyleSheet.create({
         marginBottom: 10,
         width: 80,
         marginTop: 20,
-        textAlign: "center"
+        textAlign: "center",
+
     },
     heading: {
         fontSize: 24,
         fontWeight: "bold",
-        marginTop:20
+        marginTop: 20
     },
 
     button: {
@@ -92,17 +102,16 @@ const carStyle = StyleSheet.create({
         paddingVertical: 2,
         borderRadius: 5,
         marginBottom: 10,
+        marginTop: 20,
         textAlign: "center",
         width: "80%",
-
-
-        
     },
 
-    buttonText:{
-        color:"white",
-        fontWeight:"bold",
-        padding:10,
+    buttonText: {
+        color: "white",
+        fontWeight: "bold",
+        padding: 10,
+
     }
 })
 

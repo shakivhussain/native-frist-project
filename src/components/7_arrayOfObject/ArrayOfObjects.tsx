@@ -211,8 +211,8 @@ const ArrayOfObjects = () => {
                 keyExtractor={item => item.id.toString()}
 
                 renderItem={({ item }) => {
-                    return <CarComponent product={
-                        item}/>
+                    return <CarComponent 
+                    product={item}/>
                 }} />
 
         </View>
